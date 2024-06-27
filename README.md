@@ -20,9 +20,8 @@ I've been exploring various resources to build a strong foundation in machine le
 1. Studied PyTorch fundamentals using the [Learn PyTorch](https://www.learnpytorch.io/) website.
 2. Explored PyTorch's [tensor documentation](https://pytorch.org/docs/stable/tensors.html).
 3. Watched educational videos on neural networks and PyTorch:
-   - [Neural Networks from Scratch](https://www.youtube.com/watch?w=XkY2DOUCWMU)
+   - [Neural Networks from Scratch]([https://www.youtube.com/watch?w=XkY2DOUCWMU](https://www.youtube.com/watch?v=w8yWXqWQYmU))
    - [PyTorch in 100 Seconds](https://www.youtube.com/watch?v=ORMx45xqWkA)
-   - [PyTorch in 5 Minutes](https://www.youtube.com/watch?v=w8yWXqWQYmU)
 4. Implemented a neural network from scratch on Kaggle.
 
 ## Key Concepts
