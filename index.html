@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML-Fundamentals Course</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .tab {
+            display: flex;
+            background-color: var(--secondary-color);
+        }
+        .tab button {
+            flex: 1;
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 1em;
+            color: white;
+        }
+        .tab button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .tab button.active {
+            background-color: var(--primary-color);
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .concept, .progress-item, .resource-item {
+            background-color: var(--card-background);
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .concept:hover, .progress-item:hover, .resource-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .progress-item::before {
+            content: '✅ ';
+        }
+        .resource-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .resource-item a:hover {
+            text-decoration: underline;
+        }
+        .dark-mode {
+            --primary-color: #2980b9;
+            --secondary-color: #34495e;
+            --background-color: #2c3e50;
+            --text-color: #ecf0f1;
+            --card-background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ML-Fundamentals Course</h1>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </header>
+        
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Overview')" id="defaultOpen">Overview</button>
+            <button class="tablinks" onclick="openTab(event, 'Concepts')">Key Concepts</button>
+            <button class="tablinks" onclick="openTab(event, 'Progress')">Progress</button>
+            <button class="tablinks" onclick="openTab(event, 'Resources')">Resources</button>
+        </div>
+
+        <div id="Overview" class="tabcontent">
+            <h2>Course Overview</h2>
+            <p>This course covers matrix multiplication, PyTorch basics, tensors, and neural networks. It's designed to build a strong foundation in machine learning concepts and their practical applications.</p>
+        </div>
+
+        <div id="Concepts" class="tabcontent">
+            <h2>Key Concepts</h2>
+            <div class="concept">
+                <h3>Matrix Multiplication</h3>
+                <p>Fundamental operation in linear algebra, essential for neural networks.</p>
+            </div>
+            <div class="concept">
+                <h3>PyTorch</h3>
+                <p>Open-source machine learning library for building and training neural networks.</p>
+            </div>
+            <div class="concept">
+                <h3>Tensors</h3>
+                <p>Multi-dimensional arrays, the fundamental data structure in PyTorch.</p>
+            </div>
+            <div class="concept">
+                <h3>Neural Networks</h3>
+                <p>Machine learning models inspired by the human brain.</p>
+            </div>
+        </div>
+
+        <div id="Progress" class="tabcontent">
+            <h2>Learning Progress</h2>
+            <div class="progress-item">Studied PyTorch fundamentals</div>
+            <div class="progress-item">Explored PyTorch tensor documentation</div>
+            <div class="progress-item">Watched educational videos on neural networks and PyTorch</div>
+            <div class="progress-item">Implemented a neural network from scratch on Kaggle</div>
+        </div>
+
+        <div id="Resources" class="tabcontent">
+            <h2>Learning Resources</h2>
+            <div class="resource-item">
+                <a href="https://github.com/mrdbourke/pytorch-deep-learning/discussions" target="_blank">PyTorch Deep Learning GitHub</a>
+            </div>
+            <div class="resource-item">
+                <a href="https://www.learnpytorch.io/" target="_blank">Learn PyTorch</a>
+            </div>
+            <div class="resource-item">
+                <a href="https://pytorch.org/docs/stable/tensors.html" target="_blank">PyTorch Tensor Documentation</a>
+            </div>
+            <div class="resource-item">
+                <a href="https://www.kaggle.com/code/tariveadhikari/nn-from-scratch/edit" target="_blank">Neural Network from Scratch (Kaggle)</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Add hover effect to concepts
+        const concepts = document.querySelectorAll('.concept');
+        concepts.forEach(concept => {
+            concept.addEventListener('mouseover', () => {
+                concept.style.backgroundColor = 'var(--primary-color)';
+                concept.style.color = 'white';
+            });
+            concept.addEventListener('mouseout', () => {
+                concept.style.backgroundColor = 'var(--card-background)';
+                concept.style.color = 'var(--text-color)';
+            });
+        });
+
+        // Add progress tracker
+        let completedTasks = 0;
+        const progressItems = document.querySelectorAll('.progress-item');
+        progressItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('completed');
+                completedTasks = document.querySelectorAll('.progress-item.completed').length;
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            const progressPercentage = (completedTasks / progressItems.length) * 100;
+            const header = document.querySelector('header');
+            header.style.background = `linear-gradient(to right, var(--primary-color) ${progressPercentage}%, var(--secondary-color) ${progressPercentage}%)`;
+        }
+    </script>
+</body>
+</html>
