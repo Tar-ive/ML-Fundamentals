@@ -2,7 +2,7 @@
 
 Welcome to my personal ML-Fundamentals course! This repository contains my journey through learning the fundamentals of machine learning, with a focus on PyTorch and neural networks.
 
-[Live View]('https://tar-ive.github.io/ML-Fundamentals/)
+[Live Demo]('https://tar-ive.github.io/ML-Fundamentals/) 
 
 ## Course Overview
 
